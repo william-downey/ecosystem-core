@@ -25,5 +25,5 @@ export async function PATCH(
   if (body.status && body.status !== result.previous.status) {
     automation = await runJobStatusChanged(result.next);
   }
-  return Response.json({ job: result.next, automation });
+  return Response.json({ job: getJob(id), automation });
 }
