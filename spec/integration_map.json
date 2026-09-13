@@ -1,0 +1,19 @@
+{
+  "integration_map": {
+    "backend_to_frontend": {
+      "library_items": "drives dynamic library views for Northern Afterlight and meta overlays for USoD MG.",
+      "jobs": "drives status and delivery views for Fifty-Seven Mastering."
+    },
+    "backend_to_automation": {
+      "automation_triggers": "feeds Make.com scenarios for email, delivery, and meta signals."
+    },
+    "automation_to_email": {
+      "postmark": "transactional emails for intake, status, and delivery.",
+      "brevo": "broadcast or semi-transactional flows if needed."
+    },
+    "automation_to_delivery": {
+      "dropbox": "asset folder creation and link generation.",
+      "samply": "client-facing delivery links for mastering."
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "supabase_schema": {
+    "library": {
+      "tables": {
+        "library_items": {
+          "fields": {
+            "id": "uuid",
+            "brand": "text",
+            "type": "text",
+            "slug": "text",
+            "title": "text",
+            "description": "text",
+            "status": "text",
+            "visibility": "text",
+            "created_at": "timestamptz",
+            "updated_at": "timestamptz",
+            "meta": "jsonb"
+          }
+        },
+        "library_collections": {
+          "fields": {
+            "id": "uuid",
+            "brand": "text",
+            "name": "text",
+            "slug": "text",
+            "description": "text",
+            "created_at": "timestamptz",
+            "updated_at": "timestamptz",
+            "meta": "jsonb"
+          }
+        }
+      }
+    },
+    "mastering_jobs": {
+      "tables": {
+        "jobs": {
+          "fields": {
+            "id": "uuid",
+            "brand": "text",
+            "client_id": "uuid",
+            "status": "text",
+            "rush": "boolean",
+            "intake_form_data": "jsonb",
+            "delivery_links": "jsonb",
+            "created_at": "timestamptz",
+            "updated_at": "timestamptz",
+            "meta": "jsonb"
+          }
+        },
+        "clients": {
+          "fields": {
+            "id": "uuid",
+            "name": "text",
+            "email": "text",
+            "brand": "text",
+            "created_at": "timestamptz",
+            "updated_at": "timestamptz",
+            "meta": "jsonb"
+          }
+        }
+      }
+    },
+    "meta": {
+      "tables": {
+        "signals": {
+          "fields": {
+            "id": "uuid",
+            "brand": "text",
+            "type": "text",
+            "payload": "jsonb",
+            "active": "boolean",
+            "created_at": "timestamptz",
+            "expires_at": "timestamptz",
+            "meta": "jsonb"
+          }
+        },
+        "timeline_events": {
+          "fields": {
+            "id": "uuid",
+            "brand": "text",
+            "title": "text",
+            "description": "text",
+            "timestamp": "timestamptz",
+            "meta": "jsonb"
+          }
+        }
+      }
+    },
+    "automation": {
+      "tables": {
+        "automation_triggers": {
+          "fields": {
+            "id": "uuid",
+            "source": "text",
+            "event_type": "text",
+            "payload": "jsonb",
+            "created_at": "timestamptz",
+            "meta": "jsonb"
+          }
+        }
+      }
+    }
+  }
+}

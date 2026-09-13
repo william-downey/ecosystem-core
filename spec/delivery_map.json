@@ -1,0 +1,32 @@
+{
+  "delivery_map": {
+    "fifty_seven_mastering": {
+      "dropbox": {
+        "root_folder": "/Fifty-Seven Mastering/Clients",
+        "structure": [
+          "Client Name",
+          "Project Name",
+          "Deliverables"
+        ]
+      },
+      "samply": {
+        "project_naming": "FSM-{client_name}-{project_name}-{job_id}",
+        "link_usage": "client_delivery_only",
+        "versioning": "per_job"
+      }
+    },
+    "northern_afterlight": {
+      "dropbox": {
+        "root_folder": "/Northern Afterlight/Assets",
+        "structure": [
+          "Project Name",
+          "Release",
+          "Archive"
+        ]
+      },
+      "samply": {
+        "enabled": false
+      }
+    }
+  }
+}

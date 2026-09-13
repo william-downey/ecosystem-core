@@ -1,0 +1,32 @@
+{
+  "component_inventory": {
+    "global": [
+      "ShellLayout",
+      "BrandSwitcher",
+      "NavBar",
+      "Footer",
+      "ErrorBoundary"
+    ],
+    "Northern Afterlight": [
+      "NALibraryGrid",
+      "NAProjectCard",
+      "NAJournalEntry",
+      "NAHighlightBanner"
+    ],
+    "Fifty-Seven Mastering": [
+      "FSMIntakeForm",
+      "FSMJobStatusCard",
+      "FSMDeliveryPanel",
+      "FSMPricingTable"
+    ],
+    "USoD MG": [
+      "USSignalCard",
+      "USTimelineView",
+      "USLoreEntry"
+    ],
+    "Fourth Brand": [
+      "FBExperimentCard",
+      "FBLabPanel"
+    ]
+  }
+}

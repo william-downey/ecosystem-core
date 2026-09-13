@@ -1,0 +1,44 @@
+{
+  "admin_tools_architecture": {
+    "global_admin": {
+      "modules": [
+        "brand_overview",
+        "library_management",
+        "user_management",
+        "automation_monitoring",
+        "delivery_monitoring"
+      ]
+    },
+    "brand_admin": {
+      "Northern Afterlight": {
+        "modules": [
+          "library_editor",
+          "project_curator",
+          "journal_editor",
+          "highlight_manager"
+        ]
+      },
+      "Fifty-Seven Mastering": {
+        "modules": [
+          "intake_queue",
+          "job_status_board",
+          "delivery_link_manager",
+          "client_communication_log"
+        ]
+      },
+      "USoD MG": {
+        "modules": [
+          "signal_editor",
+          "meta_timeline_editor",
+          "lore_entry_manager"
+        ]
+      },
+      "Fourth Brand": {
+        "modules": [
+          "experiment_manager",
+          "lab_asset_manager"
+        ]
+      }
+    }
+  }
+}

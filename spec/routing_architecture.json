@@ -1,0 +1,73 @@
+{
+  "routing_architecture": {
+    "global_shell": {
+      "base_routes": [
+        "/",
+        "/northern-afterlight",
+        "/fifty-seven-mastering",
+        "/usod-mg",
+        "/fourth-brand"
+      ],
+      "error_routes": [
+        "/error/route-not-found",
+        "/error/system"
+      ]
+    },
+    "brand_routes": {
+      "Northern Afterlight": {
+        "routes": [
+          "/northern-afterlight",
+          "/northern-afterlight/library",
+          "/northern-afterlight/projects",
+          "/northern-afterlight/journal",
+          "/northern-afterlight/about",
+          "/northern-afterlight/contact"
+        ],
+        "dynamic_routes": [
+          "/northern-afterlight/library/:item_slug",
+          "/northern-afterlight/projects/:project_slug"
+        ]
+      },
+      "Fifty-Seven Mastering": {
+        "routes": [
+          "/fifty-seven-mastering",
+          "/fifty-seven-mastering/services",
+          "/fifty-seven-mastering/pricing",
+          "/fifty-seven-mastering/intake",
+          "/fifty-seven-mastering/status",
+          "/fifty-seven-mastering/delivery",
+          "/fifty-seven-mastering/faq",
+          "/fifty-seven-mastering/contact"
+        ],
+        "dynamic_routes": [
+          "/fifty-seven-mastering/status/:job_id",
+          "/fifty-seven-mastering/delivery/:job_id"
+        ]
+      },
+      "USoD MG": {
+        "routes": [
+          "/usod-mg",
+          "/usod-mg/signals",
+          "/usod-mg/lore",
+          "/usod-mg/timeline",
+          "/usod-mg/about"
+        ],
+        "dynamic_routes": [
+          "/usod-mg/signals/:signal_id",
+          "/usod-mg/lore/:entry_slug"
+        ]
+      },
+      "Fourth Brand": {
+        "routes": [
+          "/fourth-brand",
+          "/fourth-brand/experiments",
+          "/fourth-brand/lab",
+          "/fourth-brand/about"
+        ],
+        "dynamic_routes": [
+          "/fourth-brand/experiments/:experiment_id"
+        ]
+      }
+    }
+  }
+}

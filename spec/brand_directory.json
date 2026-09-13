@@ -1,0 +1,89 @@
+{
+  "brand_directory": {
+    "Ugly Side of Drama": {
+      "slug": "ugly-side-of-drama",
+      "type": "parent_brand",
+      "role": "Primary governing brand for the entire ecosystem.",
+      "audience": ["global_ecosystem_users"],
+      "domains": ["governance", "routing", "identity"],
+      "primary_routes": [
+        "home",
+        "brands",
+        "about"
+      ],
+      "content_sources": ["Webflow.cms_pages"],
+      "email_profile": "usod_parent",
+      "delivery_profile": "none"
+    },
+    "USoD Music Group": {
+      "slug": "usod-music-group",
+      "type": "record_label",
+      "role": "Record label responsible for artist releases, editorial, and playlists.",
+      "audience": ["listeners", "artists", "fans"],
+      "domains": ["music_releases", "editorial"],
+      "primary_routes": [
+        "home",
+        "releases",
+        "artists",
+        "playlists",
+        "about"
+      ],
+      "content_sources": ["Webflow.cms_pages", "Supabase.library"],
+      "email_profile": "usod_mg",
+      "delivery_profile": "none"
+    },
+    "Northern Afterlight": {
+      "slug": "northern-afterlight",
+      "type": "music_library",
+      "role": "Cinematic music library and sync catalog.",
+      "audience": ["listeners", "sync_clients", "creatives"],
+      "domains": ["library", "catalog", "sync"],
+      "primary_routes": [
+        "home",
+        "library",
+        "projects",
+        "journal",
+        "about"
+      ],
+      "content_sources": ["Supabase.library", "Webflow.cms_pages"],
+      "email_profile": "northern_afterlight_main",
+      "delivery_profile": "samply_dropbox_default"
+    },
+    "Fifty-Seven Mastering": {
+      "slug": "fifty-seven-mastering",
+      "type": "mastering_brand",
+      "role": "Audio mastering studio with structured intake, workflow, and delivery.",
+      "audience": ["artists", "labels", "producers"],
+      "domains": ["audio_mastering", "technical_services"],
+      "primary_routes": [
+        "home",
+        "services",
+        "pricing",
+        "intake",
+        "status",
+        "delivery",
+        "faq",
+        "contact"
+      ],
+      "content_sources": ["Webflow.cms_pages", "Supabase.jobs"],
+      "email_profile": "fifty_seven_mastering",
+      "delivery_profile": "samply_dropbox_mastering"
+    },
+    "Fourth Brand": {
+      "slug": "fourth-brand",
+      "type": "auxiliary_brand",
+      "role": "Optional future brand for expansion or experimental use.",
+      "audience": ["experimental_users", "beta_testers"],
+      "domains": ["experimental", "sandbox"],
+      "primary_routes": [
+        "home",
+        "experiments",
+        "lab",
+        "about"
+      ],
+      "content_sources": ["Supabase.experimental", "Webflow.cms_pages"],
+      "email_profile": "fourth_brand",
+      "delivery_profile": "none"
+    }
+  }
+}

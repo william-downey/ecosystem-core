@@ -1,0 +1,45 @@
+{
+  "automation_map": {
+    "scenarios": [
+      {
+        "name": "mastering_intake_confirmation",
+        "source": "supabase.mastering_jobs.jobs",
+        "trigger": "job_created",
+        "conditions": {
+          "brand": "Fifty-Seven Mastering"
+        },
+        "actions": [
+          "send_email:intake_confirmation",
+          "log_event:automation_triggers"
+        ]
+      },
+      {
+        "name": "mastering_delivery_ready",
+        "source": "supabase.mastering_jobs.jobs",
+        "trigger": "job_status_changed",
+        "conditions": {
+          "status": "ready_for_delivery",
+          "brand": "Fifty-Seven Mastering"
+        },
+        "actions": [
+          "create_dropbox_folder",
+          "create_samply_link",
+          "update_job_delivery_links",
+          "send_email:delivery_ready"
+        ]
+      },
+      {
+        "name": "meta_signal_broadcast",
+        "source": "supabase.meta.signals",
+        "trigger": "signal_created",
+        "conditions": {
+          "active": true,
+          "brand": "USoD MG"
+        },
+        "actions": [
+          "log_event:automation_triggers"
+        ]
+      }
+    ]
+  }
+}

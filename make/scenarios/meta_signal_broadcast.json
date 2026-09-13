@@ -1,0 +1,34 @@
+{
+  "name": "meta_signal_broadcast",
+  "source": "supabase.meta.signals",
+  "trigger": "signal_created",
+  "conditions": {
+    "active": true,
+    "brand": "USoD MG"
+  },
+  "actions": [
+    "log_event:automation_triggers"
+  ],
+  "make_modules": [
+    {
+      "module": "supabase:WatchRecords",
+      "table": "signals",
+      "event": "insert"
+    },
+    {
+      "module": "filter",
+      "conditions": {
+        "active": true,
+        "brand": "USoD MG"
+      }
+    },
+    {
+      "module": "supabase:CreateRecord",
+      "table": "automation_triggers",
+      "fields": {
+        "source": "supabase.meta.signals",
+        "event_type": "signal_created"
+      }
+    }
+  ]
+}

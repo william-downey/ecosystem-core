@@ -1,0 +1,69 @@
+{
+  "temporal_layers": {
+    "global": {
+      "time_zone": "America/New_York",
+      "seasonal_modes_enabled": true,
+      "maintenance_windows": [
+        {
+          "day_of_week": "Sunday",
+          "start_hour": 2,
+          "end_hour": 4,
+          "affects": ["automation", "delivery"]
+        }
+      ]
+    },
+    "brand_modes": {
+      "Northern Afterlight": {
+        "modes": [
+          {
+            "name": "release_window",
+            "description": "Elevated visibility for new releases.",
+            "conditions": {
+              "days_before_release": 3,
+              "days_after_release": 7
+            },
+            "effects": {
+              "highlight_in_library": true,
+              "pin_to_home": true
+            }
+          }
+        ]
+      },
+      "Fifty-Seven Mastering": {
+        "modes": [
+          {
+            "name": "rush_mode",
+            "description": "Higher priority for rush jobs.",
+            "conditions": {
+              "job_flag": "rush",
+              "status": "in_progress"
+            },
+            "effects": {
+              "prioritize_in_queue": true,
+              "send_additional_status_emails": true
+            }
+          }
+        ]
+      },
+      "USoD MG": {
+        "modes": [
+          {
+            "name": "signal_window",
+            "description": "Time-bounded meta signals.",
+            "conditions": {
+              "signal_type": "timeboxed",
+              "active": true
+            },
+            "effects": {
+              "show_on_meta_timeline": true,
+              "trigger_automation": true
+            }
+          }
+        ]
+      },
+      "Fourth Brand": {
+        "modes": []
+      }
+    }
+  }
+}

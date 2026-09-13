@@ -1,0 +1,44 @@
+{
+  "cms_schema": {
+    "collections": {
+      "pages": {
+        "fields": {
+          "slug": "string",
+          "title": "string",
+          "brand": "string",
+          "layout": "string",
+          "content_blocks": "json",
+          "seo_meta": "json"
+        }
+      },
+      "posts": {
+        "fields": {
+          "slug": "string",
+          "title": "string",
+          "brand": "string",
+          "body": "richtext",
+          "tags": "array",
+          "published_at": "datetime",
+          "seo_meta": "json"
+        }
+      },
+      "brand_pages": {
+        "fields": {
+          "brand": "string",
+          "slug": "string",
+          "title": "string",
+          "hero_block": "json",
+          "sections": "json"
+        }
+      },
+      "static_content_blocks": {
+        "fields": {
+          "key": "string",
+          "brand": "string",
+          "content": "richtext",
+          "meta": "json"
+        }
+      }
+    }
+  }
+}

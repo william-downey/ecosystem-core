@@ -1,0 +1,53 @@
+{
+  "governance_suite": {
+    "global": {
+      "naming_conventions": {
+        "tables": "snake_case",
+        "fields": "snake_case",
+        "routes": "kebab-case",
+        "components": "PascalCase"
+      },
+      "safety": {
+        "require_explicit_brand_binding_for_library_items": true,
+        "disallow_orphaned_routes": true,
+        "disallow_automation_without_explicit_trigger_source": true
+      }
+    },
+    "brand_specific": {
+      "Northern Afterlight": {
+        "library_visibility": "public_with_curated_highlights",
+        "meta_overlays_allowed": true,
+        "service_flows": "none"
+      },
+      "Fifty-Seven Mastering": {
+        "library_visibility": "private_per_client",
+        "meta_overlays_allowed": false,
+        "service_flows": "required_for_all_jobs"
+      },
+      "USoD MG": {
+        "library_visibility": "curated_meta_only",
+        "meta_overlays_allowed": true,
+        "service_flows": "none"
+      },
+      "Fourth Brand": {
+        "library_visibility": "experimental_opt_in",
+        "meta_overlays_allowed": true,
+        "service_flows": "optional"
+      }
+    },
+    "routing": {
+      "require_brand_context_for_dynamic_routes": true,
+      "fallback_route": "/error/route-not-found",
+      "brand_home_routes": {
+        "Northern Afterlight": "/northern-afterlight",
+        "Fifty-Seven Mastering": "/fifty-seven-mastering",
+        "USoD MG": "/usod-mg",
+        "Fourth Brand": "/fourth-brand"
+      }
+    },
+    "temporal": {
+      "enforce_temporal_layers_for_meta_events": true,
+      "allow_brand_specific_temporal_rules": true
+    }
+  }
+}

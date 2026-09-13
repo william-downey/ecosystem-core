@@ -1,0 +1,37 @@
+{
+  "name": "mastering_intake_confirmation",
+  "source": "supabase.mastering_jobs.jobs",
+  "trigger": "job_created",
+  "conditions": {
+    "brand": "Fifty-Seven Mastering"
+  },
+  "actions": [
+    "send_email:intake_confirmation",
+    "log_event:automation_triggers"
+  ],
+  "make_modules": [
+    {
+      "module": "supabase:WatchRecords",
+      "table": "jobs",
+      "event": "insert"
+    },
+    {
+      "module": "filter",
+      "conditions": {
+        "brand": "Fifty-Seven Mastering"
+      }
+    },
+    {
+      "module": "postmark:SendEmail",
+      "template": "fsm_intake_confirmation"
+    },
+    {
+      "module": "supabase:CreateRecord",
+      "table": "automation_triggers",
+      "fields": {
+        "source": "supabase.mastering_jobs.jobs",
+        "event_type": "job_created"
+      }
+    }
+  ]
+}

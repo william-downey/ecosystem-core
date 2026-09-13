@@ -1,0 +1,31 @@
+{
+  "email_flow_map": {
+    "profiles": {
+      "northern_afterlight_main": {
+        "provider": "Postmark",
+        "templates": [
+          "na_release_announcement",
+          "na_library_update"
+        ]
+      },
+      "fifty_seven_mastering": {
+        "provider": "Postmark",
+        "templates": [
+          "fsm_intake_confirmation",
+          "fsm_status_update",
+          "fsm_delivery_ready"
+        ]
+      },
+      "usod_mg": {
+        "provider": "Brevo",
+        "templates": [
+          "us_signal_notification"
+        ]
+      },
+      "fourth_brand": {
+        "provider": "Brevo",
+        "templates": []
+      }
+    }
+  }
+}

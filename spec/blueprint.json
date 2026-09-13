@@ -1,0 +1,76 @@
+{
+  "blueprint": {
+    "frontend": {
+      "platform": "Webflow",
+      "roles": [
+        "presentation_layer",
+        "routing_shell",
+        "CMS_for_non_library_content"
+      ],
+      "collections": [
+        "pages",
+        "posts",
+        "brand_pages",
+        "static_content_blocks"
+      ]
+    },
+    "backend": {
+      "platform": "Supabase",
+      "roles": [
+        "primary_library_store",
+        "jobs_and_workflows",
+        "meta_state",
+        "automation_triggers"
+      ],
+      "core_modules": [
+        "library",
+        "mastering_jobs",
+        "meta",
+        "experimental",
+        "automation"
+      ]
+    },
+    "automation": {
+      "platform": "Make.com",
+      "roles": [
+        "event_driven_automation",
+        "email_triggering",
+        "delivery_pipeline_orchestration",
+        "status_sync_between_backend_and_frontend"
+      ]
+    },
+    "email": {
+      "providers": [
+        "Postmark",
+        "Brevo"
+      ],
+      "roles": [
+        "transactional_notifications",
+        "status_updates",
+        "intake_confirmations",
+        "delivery_ready_emails"
+      ]
+    },
+    "delivery": {
+      "platforms": [
+        "Dropbox",
+        "Samply"
+      ],
+      "roles": [
+        "asset_storage",
+        "client_delivery",
+        "versioning",
+        "link_generation"
+      ]
+    },
+    "governance": {
+      "scope": [
+        "brand_behavior",
+        "routing_rules",
+        "temporal_logic",
+        "content_visibility",
+        "automation_safety"
+      ]
+    }
+  }
+}
