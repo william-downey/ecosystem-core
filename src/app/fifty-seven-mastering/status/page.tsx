@@ -20,7 +20,10 @@ export default function StatusIndexPage() {
         </div>
         {sample ? (
           <p className="mt-6 font-mono text-xs text-muted-foreground">
-            Seeded example: {sample.id}
+            Seeded example:{" "}
+            <a className="underline-offset-4 hover:text-foreground hover:underline" href={`/fifty-seven-mastering/status/${sample.id}`}>
+              {sample.id}
+            </a>
           </p>
         ) : null}
       </section>

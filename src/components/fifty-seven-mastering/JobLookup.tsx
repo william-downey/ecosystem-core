@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { buttonVariants } from "@/components/ui/button";
 
 export function JobLookup({ kind }: { kind: "status" | "delivery" }) {
   const router = useRouter();
@@ -18,13 +17,15 @@ export function JobLookup({ kind }: { kind: "status" | "delivery" }) {
         router.push(`/fifty-seven-mastering/${kind}/${value.trim()}`);
       }}
     >
-      <Input
+      <input
         value={value}
         onChange={(event) => setValue(event.target.value)}
         placeholder="Job UUID"
-        className="font-mono"
+        className="h-9 w-full rounded-lg border border-input bg-transparent px-2.5 font-mono text-sm outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50"
       />
-      <Button type="submit">Open {kind}</Button>
+      <button type="submit" className={buttonVariants()}>
+        Open {kind}
+      </button>
     </form>
   );
 }
