@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.log
+
+# SQLite database files (runtime state)
+server/data/*.sqlite
+server/data/*.sqlite-*
+server/data/*.db
+
+# Env
+.env
+.env.local
